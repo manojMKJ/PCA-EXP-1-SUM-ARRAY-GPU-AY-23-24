@@ -1,29 +1,24 @@
-# PCA : EXP-1  SUM ARRAY GPU
-
-<h3>ENTER YOUR NAME : Manoj Kumar G</h3>
-
-<h3>ENTER YOUR REGISTER NO : 212222230078</h3>
-
-<h3>EX.NO : 1</h3>
-
-<h1> <align=center> SUM ARRAY ON HOST AND DEVICE :</h3>
-    
+# PCA: EXP-1  SUM ARRAY GPU
+<h3>ENTER YOUR NAME : Manoj Kumar G S</h3>
+<h3>ENTER YOUR REGISTER NO : 212222230078/h3>
+<h3>EX. NO : 1</h3>
+<h1> <align=center> SUM ARRAY ON HOST AND DEVICE </h3>
 PCA-GPU-based-vector-summation.-Explore-the-differences.
-    
 i) Using the program sumArraysOnGPU-timer.cu, set the block.x = 1023. Recompile and run it. Compare the result with the execution configuration of block.x = 1024. Try to explain the difference and the reason.
 
 ii) Refer to sumArraysOnGPU-timer.cu, and let block.x = 256. Make a new kernel to let each thread handle two elements. Compare the results with other execution confi gurations.
-
-## AIM :
+## AIM:
 
 To perform vector addition on host and device.
 
-## EQUIPMENTS REQUIRED :
-
+## EQUIPMENTS REQUIRED:
 Hardware – PCs with NVIDIA GPU & CUDA NVCC
 Google Colab with NVCC Compiler
 
-## PROCEDURE :
+
+
+
+## PROCEDURE:
 
 1. Initialize the device and set the device properties.
 2. Allocate memory on the host for input and output arrays.
@@ -32,11 +27,7 @@ Google Colab with NVCC Compiler
 5. Launch a CUDA kernel to perform vector addition on the device.
 6. Copy output data from the device to the host and verify the results against the host's sequential vector addition. Free memory on the host and the device.
 
-## PROGRAM :
-```
-!pip install git+https://github.com/andreinechaev/nvcc4jupyter.git
-%load_ext nvcc4jupyter
-```
+## PROGRAM:
 ```
 %%cuda
 #include <cuda_runtime.h>
@@ -136,7 +127,7 @@ inline double seconds()
 #endif // _COMMON_H
 //The seconds() function you've provided is a utility function written in C/C++
 // to measure elapsed time with a high degree of precision.
-//It uses the gettimeofday function, which is available on UNIX-like systems
+It uses the gettimeofday function, which is available on UNIX-like systems
  //(e.g., Linux, macOS), to retrieve the current time
 
 void checkResult(float *hostRef, float *gpuRef, const int N)
@@ -276,12 +267,10 @@ int main(int argc, char **argv)
     return(0);
 }
 ```
-    
 
-## OUTPUT :
+## OUTPUT:
+![Screenshot (177)](https://github.com/user-attachments/assets/b36a569f-a1b3-47dd-a242-502817970c45)
 
-![Screenshot 2024-08-27 211611](https://github.com/user-attachments/assets/1c4becc8-8eb2-4b97-820b-4024f6318948)
 
-## RESULT :
-
+## RESULT:
 Thus, Implementation of sum arrays on host and device is done in nvcc cuda using random number.
